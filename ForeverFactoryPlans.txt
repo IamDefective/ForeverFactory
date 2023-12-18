@@ -1,0 +1,8 @@
+item class
+source class
+factory class
+
+link items and sources
+factories need inventories
+
+need a day system
