@@ -1,0 +1,27 @@
+MONKEY MART
+
+thread so it constantly runs and the player can still give commands
+
+goes on forever
+levels of production:
+-straight from farm : first level
+-made from farm products : second level
+-made from second level : third level
+-keeps going
+
+everything can be defined by a preset
+doesnt have to be defined by a preset
+
+able to name each thing like chemicality
+random prices when not preset
+farms called sources, can be named by player or default named based on product
+buy sources/plots
+events like weather or theft, other shit
+
+classes:
+-source
+-product
+-farm maybe
+-event
+
+resources like money and products can be allocated in specific amounts, with specific priority levels
