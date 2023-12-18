@@ -1,4 +1,5 @@
-import menu3 as men
+import menu_system as men
+
 
 class Info:
 
@@ -34,15 +35,12 @@ infExample = Info('Health', 23, play_menu)
 
 play_options = [
     ('Back', men.System.go_back),
-    ('Info', 'This is an example use of a menu system engine.\nIt\'s not done.'),
+    ('Info',
+     'This is an example use of a menu system engine.\nIt\'s not done.'),
     ('Hurt', infExample.change)
-    ]
+]
 
-main_menu.add_options([
-    play_menu,
-    ('Info', main_info),
-    settings_menu
-    ])
+main_menu.add_options([play_menu, ('Info', main_info), settings_menu])
 
 play_menu.add_options(play_options)
 play_menu.add_info([infExample.formatted()])

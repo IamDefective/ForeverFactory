@@ -6,3 +6,11 @@ link items and sources
 factories need inventories
 
 need a day system
+
+factory container of sources and amounts
+factory container of products and amounts
+factory container of employees and amounts?
+
+keep track of each type and amounts, dictionary with names as keys
+
+factory.storage['apple'] return amount

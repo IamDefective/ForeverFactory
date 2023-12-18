@@ -1,13 +1,14 @@
 class Product:
     
-    products = []
+    products = {}
 
-    def __init__(self, name):
+    def __init__(self, name, sale_price):
 
         self.name = name
+        self.sale_price = sale_price
         self.source = None
 
-        Product.products.append(self)
+        Product.products[self.name.lower()] = self
 
 class Source:
     
@@ -45,13 +46,29 @@ class Factory:
 
         self.name = name
 
+        self.sources = {}
+        self.storage = {}
+
         Factory.factories.append(self)
 
-apple = Product('Apple')
-apple_tree = Source('Apple Tree')
+    def give(self, product, amount):
 
-link(apple, apple_tree)
+        if product in self.storage:
+            self.storage[product.name.lower()] += amount
 
-apple_factory = Factory('Apple Factory')
+        else:
+            self.storage[product.name.lower()] = amount
+
+
+class Player:
+
+    credits = 0
+
+# apple = Product('Apple')
+# apple_tree = Source('Apple Tree')
+
+# link(apple, apple_tree)
+
+# apple_factory = Factory('Apple Factory')
 
 
