@@ -1,6 +1,7 @@
 class Product:
     
     products = {}
+    collections = {}
 
     def __init__(self, name, sale_price):
 
@@ -10,16 +11,35 @@ class Product:
 
         Product.products[self.name.lower()] = self
 
+    # Method for adding a product to a collection
+    def add_to_collection(self, collection):
+        Product.collections[collection].append(self.name.lower())
+
+    # Method for adding a product collection
+    @classmethod
+    def add_collection(cls, collection_name):
+        cls.collections[collection_name] = []
+
 class Source:
     
-    sources = []
+    sources = {}
+    collections = {}
     
     def __init__(self, name):
 
         self.name = name
         self.product = None
 
-        Source.sources.append(self)
+        Source.sources[self.name.lower()] = self
+
+    # Method for adding a source to a collection
+    def add_to_collection(self, collection):
+        Source.collections[collection].append(self.name.lower())
+    
+    # Method for adding a source collection
+    @classmethod
+    def add_collection(cls, collection_name):
+        cls.collections[collection_name] = []
 
 # Function for linking a product and a source
 def link(product, source):
@@ -53,11 +73,19 @@ class Factory:
 
     def give(self, product, amount):
 
-        if product in self.storage:
+        if product.name.lower() in self.storage:
             self.storage[product.name.lower()] += amount
 
         else:
             self.storage[product.name.lower()] = amount
+
+    def add_source(self, source, amount):
+
+        if source.name.lower() in self.sources:
+            self.sources[source.name.lower()] += amount
+
+        else:
+            self.sources[source.name.lower()] = amount
 
 
 class Player:

@@ -14,3 +14,8 @@ factory container of employees and amounts?
 keep track of each type and amounts, dictionary with names as keys
 
 factory.storage['apple'] return amount
+
+products and sources have a basic type (fruit, tree), specific type (apple, apple tree), and quality (slow, faster, fast) or maybe it's a multiplier
+
+('apple tree', 1) : 1
+'level one apple' : (apple, 1, 5)
