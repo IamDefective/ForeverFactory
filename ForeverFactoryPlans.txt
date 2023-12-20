@@ -19,3 +19,11 @@ products and sources have a basic type (fruit, tree), specific type (apple, appl
 
 ('apple tree', 1) : 1
 'level one apple' : (apple, 1, 5)
+
+PRODUCT
+name 'apple'
+base_sale_price 2
+
+'apple tree 1' : 60 split the key for name and level, value is amount
+
+

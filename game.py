@@ -58,6 +58,8 @@ def link(product, source):
     # Assign new product to the source
     source.product = product
 
+
+
 class Factory:
     
     factories = []
@@ -71,32 +73,37 @@ class Factory:
 
         Factory.factories.append(self)
 
-    def give(self, product, amount):
+    def give(self, type, level, amount):
 
-        if product.name.lower() in self.storage:
-            self.storage[product.name.lower()] += amount
+        try:
+            key = f'{type.name.lower()} {str(level)}'
+
+        except AttributeError:
+            raise AttributeError(f'ATTRIBUTE ERROR IN FACTORY.GIVE NEEDS TO BE FINISHED')
+
+        # This section searches for the item in the factory
+        # It is added if not found
+        if isinstance(type, Product) and key in self.storage:
+            self.storage[key] += amount
+
+        elif isinstance(type, Product) and key not in self.storage:
+            self.storage[key] = amount
+
+        elif isinstance(type, Source) and key in self.sources:
+            self.sources[key] += amount
+        
+        elif isinstance(type, Source) and key not in self.sources:
+            self.sources[key] = amount
 
         else:
-            self.storage[product.name.lower()] = amount
+            raise TypeError(f'{type} must be a Product or a Source, eventually other things')
 
-    def add_source(self, source, amount):
-
-        if source.name.lower() in self.sources:
-            self.sources[source.name.lower()] += amount
-
-        else:
-            self.sources[source.name.lower()] = amount
 
 
 class Player:
 
     credits = 0
 
-# apple = Product('Apple')
-# apple_tree = Source('Apple Tree')
 
-# link(apple, apple_tree)
-
-# apple_factory = Factory('Apple Factory')
-
+    
 
