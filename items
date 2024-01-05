@@ -15,4 +15,26 @@ Drill:
 
   stone, copper, iron, gems, other things
 
-  produce 
+  each level of drill is able to mine new things
+  can only collect a certain number of different types of things depending on the level
+
+Plants:
+  trees
+  bushes
+  grains 
+  flowers
+
+Minerals:
+  stones
+  metals
+  gems
+
+Manufactured items:
+  planks
+  bricks
+  glass
+  chemicals
+  maybe machine parts (motor, wires)
+
+Trees:
+  apple, cotton, oak, cherry, birch, cedar, spruce
