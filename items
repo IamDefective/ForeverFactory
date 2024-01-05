@@ -1,0 +1,18 @@
+Apple Tree:
+
+  5 days to grow minus 1 for every level after 1 until it is grown the day it is planted (growth time doesn't change after level 6)
+
+  grown produces 1 apple a day plus one for every level after 1
+
+  ungrown produces 2 wood plus 1 for every level after 1
+  grown produces 15 wood plus 5 for every level after 1
+
+  must be planted in a tree planter
+
+Drill:
+
+  Mines for stones and minerals, maybe other things, depending on level
+
+  stone, copper, iron, gems, other things
+
+  produce 
