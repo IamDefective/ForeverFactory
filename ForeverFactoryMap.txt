@@ -1,1 +1,14 @@
+Factory
+Manage factory (maybe pay for utilities but erderner, pay employees, maybe loans)
+Buy things to make products (planters/pots for plants, machines for manufactured items, other stuff)
+Buy things to imporve production and value of products (Fertilizer for faster growing and higher quality plants, more efficient tools for speed and quality, other stuff)
+Hire employees to manage factories, ship product (farmers, assembly workers, delivery drivers)
+Buy new factories in other areas (build factories in areas with good opportunity but too expensive to ship items to, build factories in places where it is easier to produce certain products and ship them to places where they are exotic to sell for high price)
+Items have weight, need right quality of delivery equipment and employees
+Organize and optimize delivery routes (account for factory and customer locations, load size, other things)
+Find regular clients who pay regularly for regular shipments of a number of products
+Complete special orders, more difficult, shorter notice, more diverse products, exceptionally large orders, pay much more per item
+Penalties if you miss a deadline (lose customer, pay compensation, other stuff)
 
+Actual game is turn based (First day buy stuff, end "turn" to get pay and results, Second day buy more stuff and manage facory, end "turn")
+Probably all menu based cause thats the best I can do
