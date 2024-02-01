@@ -1,0 +1,16 @@
+ALL classes:
+- Product
+- Source
+- Factory
+- Player
+- Staff (employee) fixed efficiency and pay, no competition between staff members
+- Location 
+- Transport (delivery vans or trucks, different specialties and quality levels, maximum load, gas mileage)
+
+Product/Source structure:
+overall product/source class
+child class for generic type (tree, flower, rock, gem)
+one instance for each specific type (oak tree object of tree, tulip object of flower)
+each generic type has name and quality level (oak tree level 1, tulip level 1)
+dictionary for container of anything
+dictionary key is item name and quality level ("oak tree 1", "tulip 1")
