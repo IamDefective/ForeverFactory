@@ -1,7 +1,6 @@
 class Product:
     
     products = {}
-    collections = {}
 
     def __init__(self, name, sale_price):
 
@@ -11,19 +10,10 @@ class Product:
 
         Product.products[self.name.lower()] = self
 
-    # Method for adding a product to a collection
-    def add_to_collection(self, collection):
-        Product.collections[collection].append(self.name.lower())
-
-    # Method for adding a product collection
-    @classmethod
-    def add_collection(cls, collection_name):
-        cls.collections[collection_name] = []
 
 class Source:
     
     sources = {}
-    collections = {}
     
     def __init__(self, name):
 
@@ -32,14 +22,6 @@ class Source:
 
         Source.sources[self.name.lower()] = self
 
-    # Method for adding a source to a collection
-    def add_to_collection(self, collection):
-        Source.collections[collection].append(self.name.lower())
-    
-    # Method for adding a source collection
-    @classmethod
-    def add_collection(cls, collection_name):
-        cls.collections[collection_name] = []
 
 # Function for linking a product and a source
 def link(product, source):
@@ -62,7 +44,7 @@ def link(product, source):
 
 class Factory:
     
-    factories = []
+    factories = {}
 
     def __init__(self, name):
 
@@ -71,7 +53,7 @@ class Factory:
         self.sources = {}
         self.storage = {}
 
-        Factory.factories.append(self)
+        Factory.factories[self.name.lower()] = self
 
     def give(self, type, level, amount):
 
